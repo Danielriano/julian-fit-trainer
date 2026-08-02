@@ -27,6 +27,19 @@
      cachea 7 días, así que hay que subir este número en cada cambio
      de estilos o los visitantes verán la versión anterior. -->
 <link rel="stylesheet" href="css/style.css?v=4">
+
+<!-- Píxel de Meta -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '248856401510528');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=248856401510528&ev=PageView&noscript=1"></noscript>
 </head>
 <body>
 
@@ -129,6 +142,21 @@
   </footer>
 
 </main>
+
+<!-- Registra qué enlace se toca, no solo que alguien entró. Es el dato
+     que dice qué producto vende. Toma el nombre del propio botón, así
+     que al añadir enlaces nuevos no hay que tocar nada aquí. -->
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href^="http"]');
+  if (!a || typeof fbq !== 'function') return;
+  var t = a.querySelector('.boton__texto');
+  fbq('trackCustom', 'ClicEnlace', {
+    enlace: t ? t.textContent.trim() : (a.getAttribute('aria-label') || a.href),
+    sitio: location.hostname
+  });
+});
+</script>
 
 </body>
 </html>
