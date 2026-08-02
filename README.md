@@ -30,11 +30,10 @@ Los botones "Mujeres" y "Hombres" están agrupados bajo un solo título porque s
 
 Las etiquetas (`46% OFF`, `12% · JULIAN2026`) solo aparecen donde hay un dato real que comunicar.
 
-## FALTA: 3 enlaces sin destino
+## FALTA: 2 enlaces sin destino
 
 Estos botones están visualmente atenuados y **no son clicables** hasta que se les ponga URL. Buscar `PENDIENTE` en `index.html`:
 
-- [ ] `#PENDIENTE_ASESORIA_VIP` → URL de la asesoría personal VIP
 - [ ] `#PENDIENTE_HOTMART_MUJERES` → checkout de Hotmart, versión mujeres
 - [ ] `#PENDIENTE_HOTMART_HOMBRES` → checkout de Hotmart, versión hombres
 
@@ -44,9 +43,10 @@ Al poner la URL real, quitar también el atributo `data-pendiente` del mismo ele
 
 | Botón | Destino |
 |---|---|
-| Cursos MNDST | themindst.com |
+| Asesoría personal VIP | dash.fitmewise.com (mismo enlace que el VIP trimestral) |
 | Training Athletic Club | dash.fitmewise.com (46% OFF) |
 | Suplementos Applied Nutrition | fuentesdistribution.com (12%, código JULIAN2026) |
+| Contacto para publicidad y campañas | wa.me con mensaje ya escrito |
 | Instagram | @julian.fitrainer |
 | TikTok | @julian.trainer |
 | YouTube | @julianfitrainer |

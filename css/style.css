@@ -200,6 +200,16 @@ img { max-width: 100%; display: block; }
   background: #FBFAF7;
 }
 
+.grupo__eyebrow {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--arena);
+  margin: 0 0 6px;
+  padding: 0 6px;
+}
+
 .grupo__titulo {
   font-family: var(--cuerpo);
   font-size: 0.85rem;
