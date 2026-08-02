@@ -51,6 +51,27 @@ Las etiquetas (`46% OFF`, `12% · JULIAN2026`) solo aparecen donde hay un dato r
 
 Los dos enlaces de Hotmart apuntan hoy a la oferta de **primera generación, 40% fundadores** (parámetro `?off=` en la URL). Cuando esa tanda cierre hay que reemplazarlos por los enlaces a precio completo y quitar la etiqueta `40% fundadores` del bloque `.grupo__cabecera` en `index.html`.
 
+## Analítica
+
+Dos herramientas, cada una para algo distinto:
+
+**Cloudflare Web Analytics** — visitas, de dónde vienen, qué páginas ven. Sin cookies, así que no requiere banner de consentimiento. Token propio de este dominio (`46a2886e…`), en el `<script type="module">` al final del `<body>`. Panel: dash.cloudflare.com → Analytics & Logs → Web Analytics.
+
+**Píxel de Meta** (`248856401510528`) — el mismo en los dos sitios, a propósito: permite armar audiencias que crucen las marcas. Cada evento incluye el dominio en el parámetro `sitio` para poder separarlas.
+
+Además del `PageView`, se registra un evento **`ClicEnlace`** cada vez que alguien toca un botón, con:
+
+- `enlace` — el texto del botón (ej. "Asesoría personal VIP")
+- `sitio` — el dominio
+
+Eso es lo que dice qué producto vende. El nombre sale del texto del propio botón, así que **al añadir enlaces nuevos no hay que tocar el script**.
+
+Para verificar: extensión *Meta Pixel Helper* en Chrome, o Administrador de eventos → Eventos de prueba.
+
+### Pendiente
+
+El píxel usa cookies. En Colombia la Ley 1581 pide aviso de tratamiento de datos: falta un enlace a política de privacidad en el pie.
+
 ## Pendiente menor
 
 - [ ] `og-image` propio de 1200×630. Ahora se comparte la foto cuadrada, que WhatsApp recorta.
