@@ -200,14 +200,25 @@ img { max-width: 100%; display: block; }
   background: #FBFAF7;
 }
 
+/* El antetítulo y el descuento comparten fila: son el mismo dato
+   —esta tanda es la primera y por eso vale menos— leído en dos
+   partes, no dos avisos separados. */
+.grupo__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 0 8px;
+  padding: 0 6px;
+}
+
 .grupo__eyebrow {
   font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--arena);
-  margin: 0 0 6px;
-  padding: 0 6px;
+  margin: 0;
 }
 
 .grupo__titulo {

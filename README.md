@@ -30,20 +30,13 @@ Los botones "Mujeres" y "Hombres" están agrupados bajo un solo título porque s
 
 Las etiquetas (`46% OFF`, `12% · JULIAN2026`) solo aparecen donde hay un dato real que comunicar.
 
-## FALTA: 2 enlaces sin destino
-
-Estos botones están visualmente atenuados y **no son clicables** hasta que se les ponga URL. Buscar `PENDIENTE` en `index.html`:
-
-- [ ] `#PENDIENTE_HOTMART_MUJERES` → checkout de Hotmart, versión mujeres
-- [ ] `#PENDIENTE_HOTMART_HOMBRES` → checkout de Hotmart, versión hombres
-
-Al poner la URL real, quitar también el atributo `data-pendiente` del mismo elemento — es lo que lo mantiene desactivado.
-
 ## Enlaces que ya funcionan
 
 | Botón | Destino |
 |---|---|
 | Asesoría personal VIP | dash.fitmewise.com (mismo enlace que el VIP trimestral) |
+| Reprograma tu cerebro — Mujeres | pay.hotmart.com/B106990362O (40% fundadores) |
+| Reprograma tu cerebro — Hombres | pay.hotmart.com/B106989870G (40% fundadores) |
 | Training Athletic Club | dash.fitmewise.com (46% OFF) |
 | Suplementos Applied Nutrition | fuentesdistribution.com (12%, código JULIAN2026) |
 | Contacto para publicidad y campañas | wa.me con mensaje ya escrito |
@@ -52,6 +45,11 @@ Al poner la URL real, quitar también el atributo `data-pendiente` del mismo ele
 | YouTube | @julianfitrainer |
 | Facebook | /julianfitrainer |
 | WhatsApp | +57 323 414 4683 |
+
+
+## Oferta de fundadores
+
+Los dos enlaces de Hotmart apuntan hoy a la oferta de **primera generación, 40% fundadores** (parámetro `?off=` en la URL). Cuando esa tanda cierre hay que reemplazarlos por los enlaces a precio completo y quitar la etiqueta `40% fundadores` del bloque `.grupo__cabecera` en `index.html`.
 
 ## Pendiente menor
 
