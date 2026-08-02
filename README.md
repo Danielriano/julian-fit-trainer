@@ -18,33 +18,43 @@ Abrir <http://localhost:8000>
 git add -A && git commit -m "descripción del cambio" && git push
 ```
 
-Hostinger recibe el webhook y publica solo. Verificar en <https://julianfitrainer.com>
+Hostinger publica solo en menos de 10 segundos.
 
-## Estructura
+## Diseño
 
-| Archivo | Qué es |
+Paleta del cliente: blanco humo `#F5F5F2`, arena `#C89A6A`, negro `#111111`. Todo vive en las variables de `:root` en `css/style.css` — para retematizar, cambiar solo esas.
+
+El arena viene del tono de piel de Julian, así que la foto no termina en un borde recto: se disuelve hacia abajo en ese color mediante una máscara de degradado. Es el único gesto llamativo de la página; el resto se mantiene quieto para que ese se note.
+
+Los botones "Mujeres" y "Hombres" están agrupados bajo un solo título porque son el mismo curso en dos versiones. Separarlos obligaría a repetir un título de 45 caracteres dos veces.
+
+Las etiquetas (`46% OFF`, `12% · JULIAN2026`) solo aparecen donde hay un dato real que comunicar.
+
+## FALTA: 3 enlaces sin destino
+
+Estos botones están visualmente atenuados y **no son clicables** hasta que se les ponga URL. Buscar `PENDIENTE` en `index.html`:
+
+- [ ] `#PENDIENTE_ASESORIA_VIP` → URL de la asesoría personal VIP
+- [ ] `#PENDIENTE_HOTMART_MUJERES` → checkout de Hotmart, versión mujeres
+- [ ] `#PENDIENTE_HOTMART_HOMBRES` → checkout de Hotmart, versión hombres
+
+Al poner la URL real, quitar también el atributo `data-pendiente` del mismo elemento — es lo que lo mantiene desactivado.
+
+## Enlaces que ya funcionan
+
+| Botón | Destino |
 |---|---|
-| `index.html` | La página completa |
-| `css/style.css` | Estilos. Las variables de `:root` controlan todo el tema |
-| `assets/` | Imágenes e íconos |
-| `robots.txt` | Permite indexación |
+| Cursos MNDST | themindst.com |
+| Training Athletic Club | dash.fitmewise.com (46% OFF) |
+| Suplementos Applied Nutrition | fuentesdistribution.com (12%, código JULIAN2026) |
+| Instagram | @julian.fitrainer |
+| TikTok | @julian.trainer |
+| YouTube | @julianfitrainer |
+| Facebook | /julianfitrainer |
+| WhatsApp | +57 323 414 4683 |
 
-Para cambiar colores o tipografía, tocar solo las variables al inicio de `css/style.css`.
+## Pendiente menor
 
-## Pendientes de fase 2
+- [ ] `og-image` propio de 1200×630. Ahora se comparte la foto cuadrada, que WhatsApp recorta.
 
-Los `href` con `#PENDIENTE_*` en `index.html` son placeholders. Reemplazar por:
-
-- [ ] `#PENDIENTE_WHATSAPP` → `https://wa.me/<código país + número, sin espacios ni +>`
-- [ ] `#PENDIENTE_INSTAGRAM` → perfil de Instagram
-- [ ] `#PENDIENTE_TIKTOK` → perfil de TikTok
-- [ ] `#PENDIENTE_CHECKOUT` → URL de venta de planes
-- [ ] `#PENDIENTE_CALENDLY` → URL de agenda (Calendly / Cal.com)
-
-Assets a reemplazar:
-
-- [ ] `assets/avatar.svg` → foto real de Julian (cuadrada, mínimo 400×400, WebP o JPG optimizado)
-- [ ] `assets/favicon.svg` → favicon derivado del logo
-- [ ] `assets/og-image.jpg` → imagen 1200×630 para cuando se comparta el link (aún no existe; sin ella el link se ve sin miniatura en WhatsApp)
-
-Diseño final: paleta, tipografía y layout definitivos, a partir de los referentes visuales.
+Los archivos originales sin optimizar están en `../_originales/`, fuera del repo, para que no se publiquen.

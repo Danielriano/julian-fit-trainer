@@ -1,38 +1,31 @@
 /* =========================================================
    Julian Fit Trainer — linktree
-   FASE 1: andamiaje. El diseño final llega en la fase 2.
 
-   Para retematizar el sitio completo basta con cambiar
-   las variables de :root. No hay colores sueltos abajo.
+   Paleta del cliente:
+     blanco humo #F5F5F2 · arena #C89A6A · negro #111111
+
+   El arena viene de su tono de piel, así que la foto no
+   termina en un borde: se disuelve hacia abajo en ese color.
+   Es el único gesto llamativo de la página; todo lo demás
+   se mantiene quieto para que ese se note.
    ========================================================= */
 
 :root {
-  /* Color */
-  --color-fondo: #0d0d0f;
-  --color-superficie: #1a1a1f;
-  --color-superficie-hover: #24242b;
-  --color-borde: #2e2e37;
-  --color-texto: #f5f5f7;
-  --color-texto-suave: #a1a1ab;
-  --color-acento: #d7ff3e;
-  --color-acento-texto: #0d0d0f;
+  --humo: #F5F5F2;
+  --arena: #C89A6A;
+  --arena-tenue: #EDE2D6;
+  --tinta: #111111;
+  --tinta-suave: #6B6862;
+  --linea: #E2DFD8;
 
-  /* Tipografía */
-  --fuente-cuerpo: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --fuente-titulo: var(--fuente-cuerpo);
+  --display: "Archivo", system-ui, sans-serif;
+  --cuerpo: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Forma y ritmo */
-  --radio: 14px;
-  --radio-boton: 12px;
-  --ancho-max: 480px;
-  --espacio: 12px;
+  --ancho: 440px;
+  --gap: 10px;
 }
 
-/* ---------- Reset mínimo ---------- */
-
-*,
-*::before,
-*::after { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; }
 
@@ -40,57 +33,97 @@ body {
   margin: 0;
   min-height: 100dvh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 40px 20px;
 
-  font-family: var(--fuente-cuerpo);
-  color: var(--color-texto);
-  background: var(--color-fondo);
+  font-family: var(--cuerpo);
+  color: var(--tinta);
+  background: var(--humo);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 img { max-width: 100%; display: block; }
 
-/* ---------- Contenedor ---------- */
-
-.tarjeta {
+.pagina {
   width: 100%;
-  max-width: var(--ancho-max);
+  max-width: var(--ancho);
+  padding: 0 20px 56px;
 }
 
-/* ---------- Perfil ---------- */
+/* ---------- Hero ----------
+   La máscara desvanece la foto hacia el fondo. El propio
+   fondo de la imagen ya es arena, así que la transición
+   no se lee como efecto: se lee como continuidad. */
 
-.perfil {
-  text-align: center;
-  margin-bottom: 28px;
+.hero { text-align: center; }
+
+.hero__foto {
+  margin: 0 -20px 4px;
+  background:
+    radial-gradient(120% 80% at 50% 20%, var(--arena-tenue), transparent 70%);
 }
 
-.perfil__avatar {
-  width: 112px;
-  height: 112px;
-  border-radius: 50%;
+.hero__foto img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  margin: 0 auto 16px;
-  border: 2px solid var(--color-borde);
-  background: var(--color-superficie);
+  object-position: center 18%;
+
+  -webkit-mask-image: linear-gradient(to bottom, #000 52%, transparent 97%);
+  mask-image: linear-gradient(to bottom, #000 52%, transparent 97%);
 }
 
-.perfil__nombre {
-  font-family: var(--fuente-titulo);
-  font-size: 1.5rem;
+.hero__nombre {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 12vw, 3.1rem);
   font-weight: 800;
-  letter-spacing: -0.02em;
-  margin: 0 0 6px;
+  font-stretch: 110%;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin: -14px 0 10px;
 }
 
-.perfil__bio {
-  font-size: 0.95rem;
-  color: var(--color-texto-suave);
+/* El apellido en arena: separa las dos palabras sin recurrir
+   a un segundo tamaño de tipo. */
+.hero__nombre span {
+  display: block;
+  color: var(--arena);
+}
+
+.hero__bio {
+  font-size: 0.9rem;
+  color: var(--tinta-suave);
   margin: 0 auto;
-  max-width: 32ch;
+  max-width: 30ch;
   text-wrap: balance;
+}
+
+/* ---------- Redes ---------- */
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 20px 0 26px;
+}
+
+.red {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: var(--tinta);
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.red svg { width: 20px; height: 20px; }
+
+.red:hover {
+  background: var(--tinta);
+  color: var(--humo);
 }
 
 /* ---------- Botones ---------- */
@@ -98,99 +131,144 @@ img { max-width: 100%; display: block; }
 .enlaces {
   display: flex;
   flex-direction: column;
-  gap: var(--espacio);
+  gap: var(--gap);
 }
 
 .boton {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 18px;
+  gap: 10px;
+  padding: 15px 20px;
 
-  background: var(--color-superficie);
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio-boton);
+  background: transparent;
+  border: 1px solid var(--tinta);
+  border-radius: 999px;
 
-  color: inherit;
+  color: var(--tinta);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.925rem;
   font-weight: 600;
+  letter-spacing: -0.01em;
 
-  transition: background-color 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
+
+.boton__texto { flex: 1; text-align: left; }
+
+.boton__flecha {
+  flex: 0 0 16px;
+  height: 16px;
+  opacity: 0.45;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.boton__flecha svg { width: 16px; height: 16px; display: block; }
 
 .boton:hover {
-  background: var(--color-superficie-hover);
-  border-color: color-mix(in srgb, var(--color-acento) 40%, var(--color-borde));
+  background: var(--tinta);
+  color: var(--humo);
 }
 
-.boton:active { transform: scale(0.985); }
-
-.boton__icono {
-  flex: 0 0 20px;
-  height: 20px;
-  color: var(--color-texto-suave);
+.boton:hover .boton__flecha {
+  opacity: 1;
+  transform: translate(2px, -2px);
 }
 
-.boton__icono svg { width: 20px; height: 20px; display: block; }
+.boton:active { transform: scale(0.99); }
 
-.boton__texto { flex: 1; }
-
-/* Botón destacado: la acción que más queremos que ocurra */
-.boton--primario {
-  background: var(--color-acento);
-  border-color: var(--color-acento);
-  color: var(--color-acento-texto);
+/* El servicio principal va en sólido: es la única acción
+   que se distingue por peso, no por color. */
+.boton--fuerte {
+  background: var(--tinta);
+  color: var(--humo);
 }
 
-.boton--primario:hover {
-  background: color-mix(in srgb, var(--color-acento) 88%, white);
-  border-color: color-mix(in srgb, var(--color-acento) 88%, white);
+.boton--fuerte:hover {
+  background: var(--arena);
+  border-color: var(--arena);
+  color: var(--tinta);
 }
 
-.boton--primario .boton__icono { color: inherit; }
+/* ---------- Curso con dos versiones ----------
+   Mujeres y hombres son el mismo producto. Agruparlos evita
+   dos botones con títulos casi idénticos de 45 caracteres. */
 
-/* ---------- Redes ---------- */
-
-.redes {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 24px;
+.grupo {
+  border: 1px solid var(--linea);
+  border-radius: 22px;
+  padding: 14px;
+  background: #FBFAF7;
 }
 
-.red {
+.grupo__titulo {
+  font-family: var(--cuerpo);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 11px;
+  padding: 0 6px;
+  color: var(--tinta);
+  text-wrap: balance;
+}
+
+.grupo__opciones {
   display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  color: var(--color-texto-suave);
-  transition: color 0.18s ease, background-color 0.18s ease;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
 }
 
-.red svg { width: 22px; height: 22px; }
+.boton--mitad {
+  padding: 12px 16px;
+  justify-content: center;
+  font-size: 0.875rem;
+}
 
-.red:hover {
-  color: var(--color-texto);
-  background: var(--color-superficie);
+.boton--mitad .boton__texto { text-align: center; flex: 0 1 auto; }
+
+/* ---------- Etiqueta de oferta ----------
+   Solo aparece donde hay un dato real: descuento o código. */
+
+.etiqueta {
+  flex: 0 0 auto;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--arena);
+  color: var(--tinta);
+  white-space: nowrap;
+}
+
+.boton:hover .etiqueta { background: var(--humo); }
+.boton--fuerte .etiqueta { background: var(--arena); }
+
+/* ---------- Enlaces sin destino todavía ---------- */
+
+.boton[data-pendiente] {
+  opacity: 0.42;
+  pointer-events: none;
+  cursor: default;
 }
 
 /* ---------- Pie ---------- */
 
 .pie {
-  margin-top: 28px;
+  margin-top: 30px;
   text-align: center;
-  font-size: 0.78rem;
-  color: var(--color-texto-suave);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
 }
 
 .pie p { margin: 0; }
 
-/* ---------- Accesibilidad ---------- */
+/* ---------- Base de calidad ---------- */
 
 :focus-visible {
-  outline: 2px solid var(--color-acento);
+  outline: 2px solid var(--arena);
   outline-offset: 3px;
 }
 
