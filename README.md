@@ -37,7 +37,7 @@ Las etiquetas (`46% OFF`, `12% · JULIAN2026`) solo aparecen donde hay un dato r
 | Asesoría personal VIP | dash.fitmewise.com (mismo enlace que el VIP trimestral) |
 | Reprograma tu cerebro — Mujeres | pay.hotmart.com/B106990362O (40% fundadores) |
 | Reprograma tu cerebro — Hombres | pay.hotmart.com/B106989870G (40% fundadores) |
-| Training Athletic Club | dash.fitmewise.com (46% OFF) |
+| Training Athletic Club | wa.me/573245505232 con mensaje ya escrito (46% OFF) |
 | Suplementos Applied Nutrition | fuentesdistribution.com (12%, código JULIAN2026) |
 | Contacto para publicidad y campañas | wa.me con mensaje ya escrito |
 | Instagram | @julian.fitrainer |
