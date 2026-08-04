@@ -75,5 +75,6 @@ El píxel usa cookies. En Colombia la Ley 1581 pide aviso de tratamiento de dato
 ## Pendiente menor
 
 - [ ] `og-image` propio de 1200×630. Ahora se comparte la foto cuadrada, que WhatsApp recorta.
+- [ ] Confirmar con Julian si la etiqueta `46% OFF` sigue teniendo sentido en Athletic Club. Antes acompañaba a un checkout; ahora el botón abre un chat, y el descuento depende de que él lo aplique por WhatsApp.
 
 Los archivos originales sin optimizar están en `../_originales/`, fuera del repo, para que no se publiquen.
