@@ -28,7 +28,7 @@ El arena viene del tono de piel de Julian, así que la foto no termina en un bor
 
 Los botones "Mujeres" y "Hombres" están agrupados bajo un solo título porque son el mismo curso en dos versiones. Separarlos obligaría a repetir un título de 45 caracteres dos veces.
 
-Las etiquetas (`46% OFF`, `12% · JULIAN2026`) solo aparecen donde hay un dato real que comunicar.
+Las etiquetas (`40% fundadores`, `12% · JULIAN2026`) solo aparecen donde hay un dato real que comunicar.
 
 ## Enlaces que ya funcionan
 
@@ -37,7 +37,6 @@ Las etiquetas (`46% OFF`, `12% · JULIAN2026`) solo aparecen donde hay un dato r
 | Asesoría personal VIP | dash.fitmewise.com (mismo enlace que el VIP trimestral) |
 | Reprograma tu cerebro — Mujeres | pay.hotmart.com/B106990362O (40% fundadores) |
 | Reprograma tu cerebro — Hombres | pay.hotmart.com/B106989870G (40% fundadores) |
-| Training Athletic Club | wa.me/573245505232 con mensaje ya escrito (46% OFF) |
 | Suplementos Applied Nutrition | fuentesdistribution.com (12%, código JULIAN2026) |
 | Contacto para publicidad y campañas | wa.me con mensaje ya escrito |
 | Instagram | @julian.fitrainer |
@@ -46,6 +45,11 @@ Las etiquetas (`46% OFF`, `12% · JULIAN2026`) solo aparecen donde hay un dato r
 | Facebook | /julianfitrainer |
 | WhatsApp | +57 323 414 4683 |
 
+## Enlaces retirados
+
+**Training Athletic Club** (retirado el 9 de agosto de 2026, a pedido de Julian). Abría un chat a wa.me/573245505232 con el mensaje de inscripción ya escrito y llevaba etiqueta `46% OFF`. Si vuelve, el bloque completo está en el historial: `git log -S "Training Athletic Club"`.
+
+Al quitar el botón también salieron sus rastros: la mención a "Athletic Club" en las dos meta descriptions y el pendiente sobre si el `46% OFF` seguía teniendo sentido. El evento `ClicEnlace` del píxel no hubo que tocarlo — saca el nombre del texto del propio botón, así que desapareció solo.
 
 ## Oferta de fundadores
 
@@ -75,6 +79,5 @@ El píxel usa cookies. En Colombia la Ley 1581 pide aviso de tratamiento de dato
 ## Pendiente menor
 
 - [ ] `og-image` propio de 1200×630. Ahora se comparte la foto cuadrada, que WhatsApp recorta.
-- [ ] Confirmar con Julian si la etiqueta `46% OFF` sigue teniendo sentido en Athletic Club. Antes acompañaba a un checkout; ahora el botón abre un chat, y el descuento depende de que él lo aplique por WhatsApp.
 
 Los archivos originales sin optimizar están en `../_originales/`, fuera del repo, para que no se publiquen.
