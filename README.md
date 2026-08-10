@@ -80,4 +80,9 @@ El píxel usa cookies. En Colombia la Ley 1581 pide aviso de tratamiento de dato
 
 - [ ] `og-image` propio de 1200×630. Ahora se comparte la foto cuadrada, que WhatsApp recorta.
 
-Los archivos originales sin optimizar están en `../_originales/`, fuera del repo, para que no se publiquen.
+## Qué se queda fuera del repo
+
+Como Hostinger publica el repo tal cual, **todo lo que se commitea queda accesible por URL**. De ahí que estén fuera:
+
+- Los archivos originales sin optimizar, en `../_originales/`.
+- `.vscode/` (en `.gitignore`) — es configuración local del editor. Si se subiera, `julianfitrainer.com/.vscode/settings.json` sería una página pública.
