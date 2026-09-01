@@ -34,6 +34,7 @@ Las etiquetas (`40% fundadores`, `12% · JULIAN2026`) solo aparecen donde hay un
 
 | Botón | Destino |
 |---|---|
+| Preventa Ciudad del Río | dash.fitmewise.com/campaign/6a95ef3a78bb0 |
 | Asesoría personal VIP | dash.fitmewise.com (mismo enlace que el VIP trimestral) |
 | Reprograma tu cerebro — Mujeres | pay.hotmart.com/B106990362O (40% fundadores) |
 | Reprograma tu cerebro — Hombres | pay.hotmart.com/B106989870G (40% fundadores) |
@@ -50,6 +51,15 @@ Las etiquetas (`40% fundadores`, `12% · JULIAN2026`) solo aparecen donde hay un
 **Training Athletic Club** (retirado el 9 de agosto de 2026, a pedido de Julian). Abría un chat a wa.me/573245505232 con el mensaje de inscripción ya escrito y llevaba etiqueta `46% OFF`. Si vuelve, el bloque completo está en el historial: `git log -S "Training Athletic Club"`.
 
 Al quitar el botón también salieron sus rastros: la mención a "Athletic Club" en las dos meta descriptions y el pendiente sobre si el `46% OFF` seguía teniendo sentido. El evento `ClicEnlace` del píxel no hubo que tocarlo — saca el nombre del texto del propio botón, así que desapareció solo.
+
+## Preventa Ciudad del Río
+
+Promo temporal, pedida por Julian el 1 de septiembre de 2026. Va de primera y se
+lleva el `boton--fuerte`, que hasta ahora tenía la Asesoría personal VIP: la
+página mantiene un solo botón sólido para que ese peso siga significando algo.
+
+Cuando la preventa cierre: borrar el bloque del `index.html` y devolverle la
+clase `boton--fuerte` al botón de Asesoría personal VIP.
 
 ## Oferta de fundadores
 
