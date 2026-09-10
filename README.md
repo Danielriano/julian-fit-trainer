@@ -36,6 +36,7 @@ Las etiquetas (`40% fundadores`, `12% · JULIAN2026`) solo aparecen donde hay un
 |---|---|
 | Preventa Ciudad del Río | dash.fitmewise.com/campaign/6a95ef3a78bb0 |
 | Asesoría personal VIP | dash.fitmewise.com (mismo enlace que el VIP trimestral) |
+| Plan Mensual | dash.fitmewise.com (registro `…-4838`), justo después del VIP |
 | Reprograma tu cerebro — Mujeres | pay.hotmart.com/B106990362O (40% fundadores) |
 | Reprograma tu cerebro — Hombres | pay.hotmart.com/B106989870G (40% fundadores) |
 | Suplementos Applied Nutrition | fuentesdistribution.com (12%, código JULIAN2026) |
