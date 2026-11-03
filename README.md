@@ -34,7 +34,7 @@ Las etiquetas (`40% fundadores`, `12% · JULIAN2026`) solo aparecen donde hay un
 
 | Botón | Destino |
 |---|---|
-| Preventa Ciudad del Río | dash.fitmewise.com/campaign/6a95ef3a78bb0 |
+| Preventa Ciudad del Río | trainingathleticclub.com/embajadores/julian-trainer |
 | Asesoría personal VIP | dash.fitmewise.com (mismo enlace que el VIP trimestral) |
 | Plan Mensual | dash.fitmewise.com (registro `…-4838`), justo después del VIP |
 | Reprograma tu cerebro — Mujeres | pay.hotmart.com/B106990362O (40% fundadores) |
@@ -58,6 +58,10 @@ Al quitar el botón también salieron sus rastros: la mención a "Athletic Club"
 Promo temporal, pedida por Julian el 1 de septiembre de 2026. Va de primera y se
 lleva el `boton--fuerte`, que hasta ahora tenía la Asesoría personal VIP: la
 página mantiene un solo botón sólido para que ese peso siga significando algo.
+
+El 10 de septiembre el destino cambió de `dash.fitmewise.com/campaign/6a95ef3a78bb0`
+a la página de embajador de Julian en Training Athletic Club
+(`trainingathleticclub.com/embajadores/julian-trainer`).
 
 Cuando la preventa cierre: borrar el bloque del `index.html` y devolverle la
 clase `boton--fuerte` al botón de Asesoría personal VIP.
