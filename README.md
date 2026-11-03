@@ -95,5 +95,5 @@ El píxel usa cookies. En Colombia la Ley 1581 pide aviso de tratamiento de dato
 
 Como Hostinger publica el repo tal cual, **todo lo que se commitea queda accesible por URL**. De ahí que estén fuera:
 
-- Los archivos originales sin optimizar, en `../_originales/`.
+- Los archivos originales sin optimizar, en `../_originales/linktrees/`.
 - `.vscode/` (en `.gitignore`) — es configuración local del editor. Si se subiera, `julianfitrainer.com/.vscode/settings.json` sería una página pública.
